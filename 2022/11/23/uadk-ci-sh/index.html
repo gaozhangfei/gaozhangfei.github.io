@@ -19,26 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://example.com/tags/index.html">
+    <meta name="description" content="use uadk ci builder.sh build and test pull request">
+<meta property="og:type" content="article">
+<meta property="og:title" content="uadk_ci.sh">
+<meta property="og:url" content="http://example.com/2022/11/23/uadk-ci-sh/index.html">
 <meta property="og:site_name" content="Zhangfei&#39;s blog">
+<meta property="og:description" content="use uadk ci builder.sh build and test pull request">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-10-25T11:56:50.000Z">
-<meta property="article:modified_time" content="2022-10-25T11:59:07.057Z">
+<meta property="article:published_time" content="2022-11-23T04:03:50.000Z">
+<meta property="article:modified_time" content="2022-11-23T04:22:17.568Z">
 <meta property="article:author" content="Zhangfei Gao">
+<meta property="article:tag" content="tools">
+<meta property="article:tag" content="ci">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/tags/">
+<link rel="canonical" href="http://example.com/2022/11/23/uadk-ci-sh/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"http://example.com/tags/index.html","path":"tags/index.html","title":"tags"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/11/23/uadk-ci-sh/","path":"2022/11/23/uadk-ci-sh/","title":"uadk_ci.sh"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>tags | Zhangfei's blog
-</title>
+<title>uadk_ci.sh | Zhangfei's blog</title>
   
 
 
@@ -160,41 +163,112 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="en"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/23/uadk-ci-sh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zhangfei Gao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhangfei's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="uadk_ci.sh | Zhangfei's blog">
+      <meta itemprop="description" content="use uadk ci builder.sh build and test pull request">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          uadk_ci.sh
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-11-23 12:03:50 / Modified: 12:22:17" itemprop="dateCreated datePublished" datetime="2022-11-23T12:03:50+08:00">2022-11-23</time>
+    </span>
+
+  
 </div>
 
-</header>
+            <div class="post-description">use uadk ci builder.sh build and test pull request</div>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body"><div class="tag-cloud">
-  <div class="tag-cloud-title">
-    4 tags in total
-  </div>
-  <div class="tag-cloud-tags">
-    <a href="/tags/ci/" style="font-size: 12px;" class="tag-cloud-0">ci</a> <a href="/tags/makefile/" style="font-size: 12px;" class="tag-cloud-0">makefile</a> <a href="/tags/pkg/" style="font-size: 12px;" class="tag-cloud-0">pkg</a> <a href="/tags/tools/" style="font-size: 30px;" class="tag-cloud-10">tools</a>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>We can use uadk ci builder.sh to build uadk and openssl-uadk on both ARM and X86.<br>ARM: build and sanity_test<br>X86: only build</p>
+<p>Moreover, we can use builder.sh to test specific pull request.<br>For example, testing <a target="_blank" rel="noopener" href="https://github.com/Linaro/uadk/pull/529">https://github.com/Linaro/uadk/pull/529</a><br>Need manually change uadk&#x2F;builders.sh.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://git.linaro.org/ci/job/configs</span><br><span class="line">$ cd configs/uadk</span><br><span class="line"></span><br><span class="line">diff --git a/uadk/builders.sh b/uadk/builders.sh</span><br><span class="line">index 28f55178b..2ca49cfd8 100755</span><br><span class="line">--- a/uadk/builders.sh</span><br><span class="line">+++ b/uadk/builders.sh</span><br><span class="line">@@ -105,6 +105,7 @@ check_existed_repo() &#123;</span><br><span class="line">git clone --depth 1 https://github.com/Linaro/uadk.git</span><br><span class="line">fi</span><br><span class="line">		cd $&#123;WORKSPACE&#125;/uadk</span><br><span class="line">+               git pull origin pull/529/head</span><br><span class="line">		;;</span><br><span class="line">	&quot;ssluadk&quot;)</span><br><span class="line">		if [ ! -d $&#123;WORKSPACE&#125;/uadk_engine ]; then</span><br><span class="line"></span><br><span class="line">$ ./builder.sh</span><br></pre></td></tr></table></figure>
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Zhangfei Gao WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/tools/" rel="tag"># tools</a>
+              <a href="/tags/ci/" rel="tag"># ci</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/16/cflow/" rel="prev" title="cflow">
+                  <i class="fa fa-chevron-left"></i> cflow
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/11/23/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
